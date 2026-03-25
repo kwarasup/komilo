@@ -1,0 +1,178 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.wrap{padding:2rem 1.5rem;max-width:900px;margin:0 auto;font-family:var(--font-sans)}
+
+.top-badge{display:inline-flex;align-items:center;gap:8px;margin-bottom:1rem}
+.badge{font-size:11px;font-weight:500;padding:3px 10px;border-radius:999px}
+.b-blue{background:#e6f1fb;color:#0c447c}
+.b-green{background:#eaf3de;color:#27500a}
+.b-amber{background:#faeeda;color:#633806}
+
+h1{font-size:24px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.sub{font-size:14px;color:var(--color-text-secondary);margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:0.5px solid var(--color-border-tertiary)}
+
+.sec-label{font-size:11px;font-weight:500;letter-spacing:.07em;color:var(--color-text-tertiary);text-transform:uppercase;margin-bottom:.75rem}
+
+/* Flow tabs */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1.25rem}
+.tab{flex:1;min-width:110px;border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:10px 10px 10px;cursor:pointer;background:var(--color-background-primary);transition:all .15s;text-align:left}
+.tab:hover{border-color:var(--color-border-secondary);background:var(--color-background-secondary)}
+.tab.on{border-color:#185fa5;background:#e6f1fb}
+.tab.on .tn{color:#0c447c}
+.tab.on .tt{color:#0c447c}
+.tn{font-size:10px;font-weight:500;color:var(--color-text-tertiary);margin-bottom:3px}
+.tt{font-size:12px;font-weight:500;color:var(--color-text-primary);line-height:1.3;margin-bottom:3px}
+.td{font-size:11px;color:var(--color-text-secondary);line-height:1.3}
+
+/* Detail card */
+.dcard{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:14px;padding:1.25rem;margin-bottom:1.75rem}
+.dhead{display:flex;align-items:center;gap:10px;margin-bottom:1rem;padding-bottom:.875rem;border-bottom:0.5px solid var(--color-border-tertiary)}
+.dnum{width:32px;height:32px;border-radius:50%;background:#e6f1fb;color:#0c447c;font-size:13px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dtitle{font-size:16px;font-weight:500;color:var(--color-text-primary)}
+.dbody{font-size:14px;color:var(--color-text-secondary);line-height:1.8;margin-bottom:1rem}
+.dtags{display:flex;flex-wrap:wrap;gap:6px}
+.dtag{font-size:11px;padding:3px 9px;border-radius:999px;border:0.5px solid var(--color-border-tertiary);color:var(--color-text-secondary);background:var(--color-background-secondary)}
+.dtag.g{background:#eaf3de;color:#27500a;border-color:transparent}
+.dtag.b{background:#e6f1fb;color:#0c447c;border-color:transparent}
+.dtag.y{background:#faeeda;color:#633806;border-color:transparent}
+.dtag.r{background:#fcebeb;color:#791f1f;border-color:transparent}
+
+/* Key findings */
+.finds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:1.75rem}
+.find{border-radius:10px;padding:12px 14px;border:0.5px solid transparent}
+.find.f1{background:#eaf3de;border-color:#c0dd97}
+.find.f2{background:#e6f1fb;border-color:#b5d4f4}
+.find.f3{background:#faeeda;border-color:#fac775}
+.find.f4{background:#fcebeb;border-color:#f7c1c1}
+.find.f5{background:#e1f5ee;border-color:#9fe1cb}
+.find.f6{background:#eeedfe;border-color:#afa9ec}
+.fnum{font-size:20px;font-weight:500;margin-bottom:4px}
+.fn1{color:#27500a}.fn2{color:#0c447c}.fn3{color:#633806}.fn4{color:#791f1f}.fn5{color:#085041}.fn6{color:#3c3489}
+.flab{font-size:11px;font-weight:500;margin-bottom:2px}
+.fla1{color:#3b6d11}.fla2{color:#185fa5}.fla3{color:#854f0b}.fla4{color:#a32d2d}.fla5{color:#0f6e56}.fla6{color:#534ab7}
+.fsub{font-size:11px;color:var(--color-text-secondary)}
+
+/* Links */
+.links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:1.75rem}
+.link{background:var(--color-background-secondary);border-radius:8px;padding:10px 12px;font-size:12px}
+.lfrom{font-weight:500;color:var(--color-text-primary);margin-bottom:3px}
+.lbody{color:var(--color-text-secondary);line-height:1.5}
+
+/* Alert */
+.alert{background:#faeeda;border:0.5px solid #fac775;border-radius:10px;padding:12px 14px;font-size:13px;color:#633806;line-height:1.6}
+.alert strong{font-weight:500}
+</style>
+
+<div class="wrap">
+
+  <div class="top-badge">
+    <span class="badge b-blue">NIA Mandatory Innovation</span>
+    <span class="badge b-green">ภาษาไทย · พร้อม Submit</span>
+  </div>
+  <h1>KomilO — ภาพรวมรายงานประเมินผลโครงการ</h1>
+  <p class="sub">หัวข้อ 10–15 · การวิเคราะห์เศรษฐศาสตร์และนโยบาย · สรุปสำหรับเข้าประชุมทีม</p>
+
+  <p class="sec-label">คลิกที่หัวข้อเพื่อดูรายละเอียด</p>
+  <div class="tabs">
+    <div class="tab on" onclick="sel(0)"><div class="tn">หัวข้อ 10</div><div class="tt">Scenario Analysis</div><div class="td">3 สถานการณ์ที่อาจเกิดขึ้น</div></div>
+    <div class="tab" onclick="sel(1)"><div class="tn">หัวข้อ 11</div><div class="tt">Sensitivity Analysis</div><div class="td">ตัวแปรไหนอันตรายสุด</div></div>
+    <div class="tab" onclick="sel(2)"><div class="tn">หัวข้อ 12</div><div class="tt">National Economic Impact</div><div class="td">ผลกระทบระดับประเทศ</div></div>
+    <div class="tab" onclick="sel(3)"><div class="tn">หัวข้อ 13</div><div class="tt">Risk Assessment</div><div class="td">ระบุและรับมือความเสี่ยง</div></div>
+    <div class="tab" onclick="sel(4)"><div class="tn">หัวข้อ 14</div><div class="tt">Policy Implications</div><div class="td">ข้อเสนอแนะต่อภาครัฐ</div></div>
+    <div class="tab" onclick="sel(5)"><div class="tn">หัวข้อ 15</div><div class="tt">Conclusions</div><div class="td">ปิดเล่ม ขอปิดทุน</div></div>
+  </div>
+
+  <div class="dcard">
+    <div class="dhead">
+      <div class="dnum" id="dn">10</div>
+      <div class="dtitle" id="dt">Scenario Analysis — การวิเคราะห์สถานการณ์</div>
+    </div>
+    <div class="dbody" id="db"></div>
+    <div class="dtags" id="dg"></div>
+  </div>
+
+  <p class="sec-label">ประเด็นสำคัญของแต่ละหัวข้อที่ควรจำ</p>
+  <div class="finds">
+    <div class="find f1">
+      <div class="fnum fn1">3</div>
+      <div class="flab fla1">สถานการณ์ที่ทดสอบ</div>
+      <div class="fsub">Pessimistic / Base / Optimistic</div>
+    </div>
+    <div class="find f2">
+      <div class="fnum fn2">6</div>
+      <div class="flab fla2">ตัวแปรที่วิเคราะห์</div>
+      <div class="fsub">ราคา Sub อ่อนไหวสูงสุด ±36%</div>
+    </div>
+    <div class="find f3">
+      <div class="fnum fn3">5</div>
+      <div class="flab fla3">มิติผลกระทบประเทศ</div>
+      <div class="fsub">นม / รายได้ / ดุลการค้า / Supply Chain / นวัตกรรม</div>
+    </div>
+    <div class="find f4">
+      <div class="fnum fn4">0</div>
+      <div class="flab fla4">ความเสี่ยง Critical</div>
+      <div class="fsub">จาก 14 รายการ ทุกตัวมีแผนรับมือ</div>
+    </div>
+    <div class="find f5">
+      <div class="fnum fn5">10</div>
+      <div class="flab fla5">ข้อเสนอเชิงนโยบาย</div>
+      <div class="fsub">5 กลุ่มหน่วยงาน ระยะสั้น–ยาว</div>
+    </div>
+    <div class="find f6">
+      <div class="fnum fn6">5</div>
+      <div class="flab fla6">ข้อค้นพบในบทสรุป</div>
+      <div class="fsub">ปิดเล่มด้วยการขอปิดทุน NIA</div>
+    </div>
+  </div>
+
+  <p class="sec-label">ความเชื่อมโยงระหว่างหัวข้อ</p>
+  <div class="links">
+    <div class="link"><div class="lfrom">หัวข้อ 8–9 → 10–11</div><div class="lbody">ตัวเลข NPV/IRR จากหัวข้อ 8–9 เป็นฐาน Base Case ของ Scenario และ Sensitivity Analysis</div></div>
+    <div class="link"><div class="lfrom">หัวข้อ 10 → 11</div><div class="lbody">Base Case จากหัวข้อ 10 เป็นจุดเริ่มต้นของการทดสอบความอ่อนไหวทีละตัวแปร</div></div>
+    <div class="link"><div class="lfrom">หัวข้อ 11 → 13</div><div class="lbody">ตัวแปรที่อ่อนไหวสูงสุดในหัวข้อ 11 กลายเป็นความเสี่ยงหลักที่ต้องรับมือในหัวข้อ 13</div></div>
+    <div class="link"><div class="lfrom">หัวข้อ 12 → 14</div><div class="lbody">ตัวเลขผลกระทบระดับประเทศในหัวข้อ 12 เป็นหลักฐานสนับสนุนข้อเสนอนโยบายในหัวข้อ 14</div></div>
+    <div class="link"><div class="lfrom">หัวข้อ 13 → 14</div><div class="lbody">ความเสี่ยง M1 (การยอมรับเทคโนโลยี) บรรเทาได้ด้วยนโยบายสนับสนุนจากกรมปศุสัตว์</div></div>
+    <div class="link"><div class="lfrom">หัวข้อ 10–14 → 15</div><div class="lbody">บทสรุปรวมตัวเลขสำคัญจากทุกหัวข้อไว้ในที่เดียว เพื่อสนับสนุนการขอปิดทุน</div></div>
+  </div>
+
+  <div class="alert">
+    <strong>⚠️ สิ่งที่ต้องอัปเดตก่อน Submit</strong><br>
+    ตัวเลข NPV / IRR / Payback Period ในหัวข้อ 10–11 ยังเป็นการประมาณการ รอยืนยันจากทีมหัวข้อ 8–9 ก่อนส่งเอกสารจริง
+  </div>
+
+</div>
+
+<script>
+const D=[
+  {n:"10",t:"Scenario Analysis — การวิเคราะห์สถานการณ์",
+   b:"ทดสอบว่าถ้าสภาวะแวดล้อมเปลี่ยนไปพร้อมกันหลายตัวแปร ผลลัพธ์ทางการเงินจะเป็นอย่างไร โดยกำหนด 3 สถานการณ์ ได้แก่ Pessimistic (ตลาดโต 50% ของเป้า), Base Case (ตามแผนธุรกิจ 5 ปี), และ Optimistic (ตลาดโต 130% ของเป้า) ครอบคลุมตารางสมมติฐาน ผลลัพธ์ทางการเงิน รายได้ 5 ปี และผลกระทบระดับฟาร์ม พบว่าแม้กรณีเลวร้ายที่สุด NPV ยังเป็นบวก และกำไรของเกษตรกรเพิ่มขึ้นในทุกสถานการณ์",
+   tags:[{l:"3 สถานการณ์",c:"b"},{l:"NPV บวกทุกกรณี",c:"g"},{l:"9 หัวข้อย่อย",c:""},{l:"5 ตาราง",c:""},{l:"โยงหัวข้อ 8–9",c:"y"}]},
+  {n:"11",t:"Sensitivity Analysis — การวิเคราะห์ความอ่อนไหว",
+   b:"ทดสอบทีละตัวแปรที่ระดับ ±10–30% ว่าส่งผลต่อ NPV มากแค่ไหน ครอบคลุม 6 ตัวแปรทั้งด้านรายได้ ต้นทุน ตลาด และประสิทธิภาพเทคโนโลยี พบว่าราคา Subscription อ่อนไหวสูงสุด (±36%) รองลงมาคือยอด Subscription (±31%) พร้อมตาราง Break-even แสดงว่าแต่ละตัวแปรต้องแย่ลงแค่ไหน NPV ถึงจะเป็นศูนย์ และแผนภูมิ Tornado Chart จัดอันดับความอ่อนไหว",
+   tags:[{l:"6 ตัวแปร",c:"b"},{l:"ราคา Sub สูงสุด ±36%",c:"y"},{l:"Tornado Chart",c:""},{l:"Break-even Analysis",c:""},{l:"8 หัวข้อย่อย",c:""}]},
+  {n:"12",t:"National Economic Impact — ผลกระทบเศรษฐกิจระดับประเทศ",
+   b:"ขยายภาพจากระดับฟาร์มสู่ระดับเศรษฐกิจมหภาค วิเคราะห์ 5 มิติ ได้แก่ ผลต่อผลผลิตน้ำนมของประเทศ, รายได้เกษตรกรและการจ้างงานใหม่ 675 ราย, ผลต่อดุลการค้า, Multiplier Effect ตลอดห่วงโซ่อุปทาน 6 ระดับ และการพัฒนาระบบนิเวศ AgTech ของประเทศ ใช้ข้อมูลจริงจาก Proposal ได้แก่ การขาดดุล 5,977 ล้านบาท, FTA 19,000 ล้านบาท และเป้า SOM 2.5%",
+   tags:[{l:"287–383M บาท/ปี",c:"g"},{l:"จ้างงาน 675 ราย",c:"g"},{l:"5 มิติ",c:"b"},{l:"Multiplier Effect 6 ระดับ",c:""},{l:"9 หัวข้อย่อย",c:""}]},
+  {n:"13",t:"Risk Assessment — การประเมินความเสี่ยง",
+   b:"ระบุความเสี่ยง 14 รายการใน 4 หมวด (T เทคโนโลยี / M ตลาด / F การเงิน / R กฎระเบียบ) ให้คะแนน Likelihood × Impact แสดงใน Risk Matrix 5×5 ผลคือไม่มีความเสี่ยงระดับ Critical เลย มีระดับสูง 3 รายการ ได้แก่ M1 การยอมรับเทคโนโลยี, T1 ความแม่นยำ ML Model และ M2 คู่แข่งตัดราคา ทุกรายการมีมาตรการรับมือที่เป็นรูปธรรมและระบุผู้รับผิดชอบชัดเจน",
+   tags:[{l:"14 ความเสี่ยง",c:"b"},{l:"0 รายการ Critical",c:"g"},{l:"Risk Matrix 5×5",c:""},{l:"4 Strategy",c:""},{l:"6 หัวข้อย่อย",c:""}]},
+  {n:"14",t:"Policy Implications — ข้อเสนอแนะเชิงนโยบาย",
+   b:"เสนอ 10 ข้อใน 5 กลุ่มหน่วยงาน โดยแต่ละข้อมีโครงสร้าง ปัญหาปัจจุบัน → ข้อเสนอที่ชัดเจน → ผลลัพธ์ที่คาดหวัง กลุ่มลำดับสูง ได้แก่ กรมปศุสัตว์อุดหนุนค่า Subscription ฟาร์มรายย่อย 50%, NIA จัดตั้ง AgTech Sandbox และ สมอ. ออก Fast-track TISI ไม่เกิน 6 เดือน กลุ่มระยะกลาง ได้แก่ กสทช. ขยาย LPWAN สู่พื้นที่เกษตร และหลักสูตรดิจิทัลใน Young Smart Farmer",
+   tags:[{l:"10 ข้อเสนอ",c:"b"},{l:"5 กลุ่มหน่วยงาน",c:""},{l:"ลำดับสูง 3 ข้อ",c:"g"},{l:"ระยะกลาง 4 ข้อ",c:"y"},{l:"8 หัวข้อย่อย",c:""}]},
+  {n:"15",t:"Conclusions — บทสรุป",
+   b:"ปิดเล่มโดยสรุปทุกหัวข้อในที่เดียว เริ่มด้วยการย้ำปัญหาโคนมไทย → สรุปสิ่งที่พัฒนาสำเร็จเทียบเป้าหมาย 6 รายการ → รวมตัวเลขสำคัญ 17 รายการจากทุกหัวข้อในตารางเดียว แบ่ง 4 ระดับ (เทคโนโลยี / ฟาร์ม / บริษัท / ประเทศ) → สรุปความแข็งแกร่งจาก Scenario+Risk → แผนขยายผล 5 ปี → ข้อค้นพบสำคัญ 5 ประการ → ขอบคุณ NIA",
+   tags:[{l:"17 ตัวเลขสำคัญ",c:"b"},{l:"แผนขยายผล 5 ปี",c:""},{l:"5 ข้อค้นพบ",c:"g"},{l:"ขอปิดทุน",c:"g"},{l:"7 หัวข้อย่อย",c:""}]},
+];
+
+function sel(i){
+  document.querySelectorAll('.tab').forEach((t,j)=>t.classList.toggle('on',j===i));
+  const d=D[i];
+  document.getElementById('dn').textContent=d.n;
+  document.getElementById('dt').textContent=d.t;
+  document.getElementById('db').textContent=d.b;
+  const clsMap={g:'dtag g',b:'dtag b',y:'dtag y',r:'dtag r','':'dtag'};
+  document.getElementById('dg').innerHTML=d.tags.map(t=>`<span class="${clsMap[t.c]||'dtag'}">${t.l}</span>`).join('');
+}
+sel(0);
+</script>
